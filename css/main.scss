@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #350048;
+}
+.buttons {
+    .btn {
+        display: inline-flex;
+        padding: 14px 40px;
+        color: #fff;
+        text-decoration: none;
+        background: linear-gradient(90deg, #6616d0, #ac34e7);
+        border-radius: 12px;
+        margin: 0 15px;
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+        &.two {
+            background: linear-gradient(90deg, #025ce3, #4e94fd);
+        }
+        .overlay {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            left: 0;
+            top:0;
+            
+            transform: translate(-50%, -50%);
+            animation: blink 0.5s linear infinite;
+        }
+    }
+}
+@keyframes blink {
+    0% {
+           height: 0;
+        width: 0d;
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        height: 400px;
+        width: 400px;
+    }
+}
